@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dinamic-forms-angular"
+    }
+  },
+  "defaultProject": "dinamic-forms-angular",
+  "cli": {
+    "analytics": false
+  }
 }

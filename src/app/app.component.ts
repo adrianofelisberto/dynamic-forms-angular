@@ -6,11 +6,14 @@ import { QuestionService } from './services/question.service';
 @Component({
   selector: 'app-root',
   template: `
-  <div>
-    <h2>Study Angular Dynamic Forms</h2>
-    <app-dynamic-form [questions]="question$ | async"></app-dynamic-form>
+  <div class="container">
+    <main>
+      <h2>Study on Angular Dynamic Forms</h2>
+      <app-dynamic-form [questions]="question$ | async"></app-dynamic-form>
+    </main>
   </div>
   `,
+  styleUrls: ['./app.component.scss'],
   providers: [QuestionService]
 })
 export class AppComponent {

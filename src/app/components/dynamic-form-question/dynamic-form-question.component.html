@@ -1,6 +1,7 @@
 <div [formGroup]="form">
-  <label [attr.for]="question.key">{{ question.label }}</label>
-
+  <div class="label">
+    <label [attr.for]="question.key">{{ question.label }}</label>
+  </div>
   <div [ngSwitch]="question.controlType">
     <input
       *ngSwitchCase="'textbox'"

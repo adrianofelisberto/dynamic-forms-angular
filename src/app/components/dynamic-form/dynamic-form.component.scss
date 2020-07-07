@@ -1,0 +1,23 @@
+form {
+  :last-child {
+    margin: 2% 0;
+  }
+
+  .form-row {
+    button {
+      padding: 12px 0;
+      width: 100%;
+      background: orange;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.2em;
+      border: none;
+      transition: all 400ms;
+      cursor: pointer;
+      &:hover {
+        background: darkorange;
+        transform: scale(1.05);
+      }
+    }
+  }
+}

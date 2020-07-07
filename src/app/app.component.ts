@@ -1,10 +1,22 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { QuestionBase } from './models/question-base';
+import { QuestionService } from './services/question.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+  <div>
+    <h2>Study Angular Dynamic Forms</h2>
+    <app-dynamic-form [questions]="question$ | async"></app-dynamic-form>
+  </div>
+  `,
+  providers: [QuestionService]
 })
 export class AppComponent {
-  title = 'dinamic-forms-angular';
+  question$: Observable<QuestionBase<any>[]>;
+
+  constructor(service: QuestionService) {
+    this.question$ = service.getQuestions();
+  }
 }

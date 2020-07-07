@@ -8,7 +8,6 @@ import { of, Observable } from 'rxjs';
 @Injectable()
 export class QuestionService {
 
-  // TODO: get from a remote source of question metadata
   getQuestions(): Observable<QuestionBase<string>[]> {
 
     const questions: QuestionBase<string>[] = [
